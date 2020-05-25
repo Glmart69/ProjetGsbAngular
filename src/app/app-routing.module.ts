@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {ConnexionComponent} from "./connexion/connexion.component";
 
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'connexion', component: ConnexionComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
