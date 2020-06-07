@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://http://localhost/ProjetGSB/public/api'
+  apiUrl: 'http://localhost/ProjetGSB/public/api'
 };
 
 /*

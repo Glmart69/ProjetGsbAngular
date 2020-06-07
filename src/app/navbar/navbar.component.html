@@ -5,14 +5,14 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav navbar-right">
-      <li class="nav-item">
+      <li *ngIf="!authStatus" class="nav-item">
         <a class="nav-link" routerLink="connexion">Connexion</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link">Medicaments</a>
+      <li *ngIf="authStatus" class="nav-item">
+        <a class="nav-link" routerLink="medicament">Medicaments</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link">Déconnexion</a>
+      <li *ngIf="authStatus" class="nav-item">
+        <a (click)="onSignOut()" class="nav-link">Déconnexion</a>
       </li>
     </ul>
   </div>

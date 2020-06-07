@@ -1,0 +1,30 @@
+
+
+<div class="MsgAcc">
+  <h2>Liste des intéractions pour le medicament {{med.nom_commercial}} </h2>
+  <br><br>
+  <form>
+    <label for="tableauFormulation" ></label>
+    <select name="tableauFormulation" id="tableauFormulation" [(ngModel)]="idAjout">
+      <option *ngFor="let uneInteraction of medAjout" value="{{uneInteraction.id_medicament}}">{{uneInteraction.nom_commercial}}</option>
+    </select>
+    <input (click)="ajoutInteraction()" type="submit" class="btn btn-success" value="Ajout de formulation">
+  </form>
+</div>
+
+<div class="container">
+  <table class="table tableau">
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col">Nom Commercial</th>
+      <th scope="col">Supprimer</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let uneInteraction of lesMedicaments">
+      <th scope="row">{{uneInteraction.nom_commercial}}</th>
+      <td><a (click)="supprimerInteraction(uneInteraction.id_medicament)"><button type="button" class="btn btn-danger">Suppression</button></a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

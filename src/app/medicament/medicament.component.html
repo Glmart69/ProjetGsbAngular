@@ -1,0 +1,34 @@
+<div class="MsgAcc">
+  <h2>Liste des médicaments</h2>
+</div>
+
+<div class="container form-med recherche">
+  <form method="post" action="">
+    <label for="nom">Nom</label>
+    <input id="nom" [(ngModel)]="lib_Med" (keyup)="recherche()" type="text" name="nom" value="">
+    <label for="nomFamille">Nom Famille</label>
+    <input id="nomFamille" [(ngModel)]="lib_fam" (keyup)="recherche()" type="text" name="nomFamille" value="">
+  </form>
+</div>
+<div class="container">
+    <table class="table tableau">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nom Commercial</th>
+        <th scope="col">Libelle Famille</th>
+        <th scope="col">Prix</th>
+        <th scope="col">Interaction</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let unMedicament of lesMedicaments">
+        <th scope="row">{{unMedicament.id_medicament}}</th>
+        <td>{{unMedicament.nom_commercial}}</td>
+        <td>{{unMedicament.lib_famille}}</td>
+        <td>{{unMedicament.prix_echantillon}}</td>
+        <td><a routerLink="../interaction/{{unMedicament.id_medicament}}"><button type="button" class="btn btn-primary">Interaction</button></a></td>
+      </tr>
+      </tbody>
+    </table>
+</div>

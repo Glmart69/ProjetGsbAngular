@@ -1,0 +1,32 @@
+
+.formulaire {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.formulaire h3{
+  margin: 25px auto 10px auto;
+}
+
+.formulaire h4{
+  margin: auto auto 25px auto;
+  color: white;
+}
+
+.formulaire div{
+  margin: 25px auto 25px auto;
+}
+.formulaire .valider{
+  margin: auto auto 25px auto;
+}
+
+.centrer form {
+  width: 320px;
+  margin: auto auto auto auto;
+  border: solid;
+  background: white;
+}
+
+label svg {
+  margin-right: 25px;
+}
